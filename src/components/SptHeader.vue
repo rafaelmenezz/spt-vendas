@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
 header {
       position: relative;
       top: 0;
