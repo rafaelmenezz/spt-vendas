@@ -1,26 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ 
+  <spt-header />
+  <spt-valor-compra />
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SptHeader from './components/Spt-Header.vue';
+import SptValorCompra from './components/SptValorCompra.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+  SptHeader, 
+  SptValorCompra
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
