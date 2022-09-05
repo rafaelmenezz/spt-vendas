@@ -30,7 +30,7 @@ export default {
   .tabela{
     display: flex;
     margin-top: 25px;
-    margin-left: 25px;
+
     width: 100vw;
   }
 
