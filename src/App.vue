@@ -1,7 +1,7 @@
 <template>
  
   <spt-header />
-  <div class="tabela">
+  <div class="main">
     <spt-cadastro-produto/>
     <spt-pedido />
   </div>
@@ -21,17 +21,19 @@ export default {
   SptHeader, 
   SptValorCompra,
   SptPedido,
-    SptCadastroProduto
+  SptCadastroProduto
   }
 }
 </script>
 
 <style>
-  .tabela{
+  .main{
     display: flex;
-    margin-top: 25px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
 
-    width: 100vw;
   }
 
 </style>

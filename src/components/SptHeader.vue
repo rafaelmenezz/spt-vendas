@@ -9,9 +9,7 @@
                   </h3>
             </div>
             <div class="usuario">
-
                   <i class="fa-regular fa-circle-user"></i>
-
             </div>
 
       </header>

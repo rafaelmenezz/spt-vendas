@@ -1,83 +1,89 @@
 <template>
-   <content class="produto-container">
-      <table>
-         <thead>
-            <tr>
-               <th>Nome</th>
-               <th>R$ Unit.</th>
-               <th>Qtd.</th>
-               <th>R$ Desc</th>
-               <th>Total</th>
-            </tr>
-         </thead>
-         <spt-tabela-produto />
-      </table>
-   </content>
+   <div class="recibo">
+      <spt-descricao-mercado />
+
+      <h2>Cupom Fiscal</h2>
+      <div class="tabela-recibo">
+         <table>
+            <thead>
+              <tr>
+                  <th>Nome</th>
+                  <th>R$ Unit.</th>
+                  <th>Qtd.</th>
+                  <th>R$ Desc</th>
+                  <th>Total</th>
+               </tr>
+
+            </thead>
+            <spt-tabela-produto />
+         </table>
+      </div>
+   </div>
 </template>
-   <script lang="js">
-   import SptTabelaProduto from './SptTabelaProduto.vue'
-   export default {
-      name:'SptPedido',
+<script lang="js">
+import SptTabelaProduto from './SptTabelaProduto.vue'
+import SptDescricaoMercado from './SptDescricaoMercado.vue';
+export default {
+   name: 'SptPedido',
 
-      components: { SptTabelaProduto }
+   components: {
+      SptTabelaProduto,
+      SptDescricaoMercado
    }
-   </script>
-   <style  >
-      .produto-container{
-         width: 100%;
-      
-         position: relative;
-         
-      }
+}
+</script>
+<style  scoped>
+.recibo {
+   margin-top: 10px;
+   margin-right: 10px;
+   border-radius: 20px;
+   width: 100%;
+   padding-bottom: 0;
+   background: #fff0b8;
+   overflow-y: auto;
+   overflow-x: hidden;
+}
+.recibo h2{
+   font-family: 'Courier New', Courier, monospace;
+   letter-spacing: 1px;
+   width: 100%;
+   text-align: center;
+   margin: 15px 0;
+}
 
-    table {
-      border-spacing: 1;
-      border-collapse: collapse;
-      background: #fff;
-      overflow: hidden;
-      width: 60vw;
-      margin: 0 auto;
-      border-radius: 10px 10px 0px 0px;
-      margin-bottom: 20px;
-   }
-   
-   table td,
-   table th {
-      padding-left: 30px;
-   }
-   
-   table th {
-      height: 60px;
-      background: #36304a;
-   }
-   
-   table tbody tr {
-      height: 60px;
-      border: 0.5px solid rgb(170, 170, 170);
-   }
-   
-   table td,
-   table th {
-      text-align: left;
-   }
-   
-   th {
-      font-family: OpenSans-Regular;
-      font-size: 18px;
-      color: #fff;
-      line-height: 1.2;
-      font-weight: unset;
-   }
-   
-   tbody tr:nth-child(even) {
-      background-color: #f5f5f5;
-   }
-   
-   tbody tr {
-      font-family: OpenSans-Regular;
-      font-size: 15px;
-      color: gray;
-      line-height: 1.2;
-      font-weight: unset;
-   }
-   </style>
+.tabela-recibo {
+   padding: 5px;
+}
+
+table {
+   font-family: 'Courier New', Courier, monospace;
+   border-spacing: 1;
+   border-collapse: collapse;
+   overflow: hidden;
+   width: 100%;
+   border-radius: 10px 10px 0px 0px;
+   margin: 20px 10px;
+}
+
+
+th {
+
+   border-bottom: 1px dashed #000; 
+   font-family: 'Courier New', Courier, monospace;
+}
+
+th:nth-child(1)
+{
+   text-align: left;
+}
+
+th:nth-child(2),
+th:nth-child(3),
+th:nth-child(4){
+   text-align: center;
+}
+
+th:nth-child(5){
+   text-align: right;
+}
+</style>
